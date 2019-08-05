@@ -1,1 +1,5 @@
+# Linux
 echo|awk '{for(i=20160901;i<=20161231;){printf("%s\n",i);cmd="date -d "i"+1day +%Y%m%d";cmd|getline i;close(cmd)}}'
+
+# Darwin
+echo|awk '{for(i=20160901;i<=20161031;){printf("%s\n",i);cmd="date -v +1d -j -f %Y%m%d "i" +%Y%m%d";cmd|getline i;close(cmd)}}'
